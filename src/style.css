@@ -1,0 +1,196 @@
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.vertical-writing {
+    writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+}
+
+.centering {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#box-container {
+    height: 200px;
+    margin: auto;
+    position: relative;
+    transition: transform 100ms ease;
+    width: 120px;
+}
+
+#box-bar {
+    background-color: #FFA000;
+    border-radius: 5px;
+    height: 100px;
+    left: 20px;
+    position: absolute;
+    width: 10px;
+}
+
+#box-body {
+    background-color: #FFA000;
+    height: 200px;
+    left: 5px;
+    position: absolute;
+    top: 0px;
+    width: 110px;
+}
+
+#box-body-hilight {
+    background-color: #FFB300;
+    color: #616161;
+    font-size: 32px;
+    height: 200px;
+    left: 30px;
+    position: absolute;
+    top: 0px;
+    width: 60px;
+}
+
+#box-hoop-top {
+    background-color: #616161;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 120px;
+}
+
+#box-hoop-top-hilight {
+    background-color: #757575;
+    height: 10px;
+    left: 30px;
+    position: absolute;
+    top: 0px;
+    width: 60px;
+}
+
+#box-hoop-bottom {
+    background-color: #616161;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 190px;
+    width: 120px;
+}
+
+#box-hoop-bottom-hilight {
+    background-color: #757575;
+    height: 10px;
+    left: 30px;
+    position: absolute;
+    top: 190px;
+    width: 60px;
+}
+
+#omikuji-container {
+    background-color: #EFEBE9;
+    box-shadow: 1px 1px 3px;
+    color: #3E2723;
+    font-family: serif;
+    height: 650px;
+    line-height: 21px;
+    position: relative;
+    margin: auto;
+    width: 160px;
+}
+
+#omikuji-title {
+    border: double 5px #3E2723;
+    font-size: 18px;
+    height: 120px;
+    left: 50px;
+    position: absolute;
+    top: -35px;
+    transform: rotate(90deg);
+    width: 30px;
+}
+
+#omikuji-frame {
+    border: solid 2px #3E2723;
+    height: 496px;
+    left: 15px;
+    position: absolute;
+    top: 80px;
+    width: 126px;
+}
+
+#omikuji-flavor {
+    font-size: 14px;
+    height: 90px;
+    left: 10px;
+    padding: 0px 0px 3px 0px;
+    position: absolute;
+    top: 10px;
+    width: 105px;
+}
+
+#omikuji-fortune {
+    border-style: solid;
+    border-width: 1px 1px 1px 0px;
+    font-size: 14px;
+    height: 28px;
+    left: 10px;
+    position: absolute;
+    top: 110px;
+    width: 52px;
+}
+
+#omikuji-legend {
+    border-style: solid;
+    border-width: 1px 0px;
+    font-size: 14px;
+    height: 28px;
+    left: 63px;
+    position: absolute;
+    top: 110px;
+    width: 52px;
+}
+
+#omikuji-detail-upper {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    font-size: 14px;
+    height: 154px;
+    left: 10px;
+    padding: 10px 0px;
+    position: absolute;
+    top: 145px;
+    width: 105px;
+}
+
+#omikuji-detail-lower {
+    font-size: 14px;
+    height: 150px;
+    left: 10px;
+    padding: 10px 0px;
+    position: absolute;
+    top: 325px;
+    width: 105px;
+}
+
+#omikuji-button {
+    background-color: #EFEBE9;
+    border: solid 2px #3E2723;
+    font-family: serif;
+    font-size: 14px;
+    color: #3E2723;
+    height: 35px;
+    left: 15px;
+    position: absolute;
+    top: 595px;
+    width: 130px;
+}
+
+#omikuji-button:hover {
+    background-color: #3E2723;
+    color: #EFEBE9;
+}
