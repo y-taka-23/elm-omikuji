@@ -1,4 +1,5 @@
 * {
+    font-family: serif;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -19,6 +20,7 @@
 }
 
 #box-container {
+    font-weight: bold;
     height: 200px;
     margin: auto;
     position: relative;
@@ -95,7 +97,6 @@
     background-color: #EFEBE9;
     box-shadow: 1px 1px 3px;
     color: #3E2723;
-    font-family: serif;
     height: 650px;
     line-height: 21px;
     position: relative;
@@ -180,7 +181,6 @@
 #omikuji-button {
     background-color: #EFEBE9;
     border: solid 2px #3E2723;
-    font-family: serif;
     font-size: 14px;
     color: #3E2723;
     height: 35px;
