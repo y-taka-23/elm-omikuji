@@ -1,10 +1,9 @@
 module Main exposing (..)
 
-import Html exposing
-    (program, div, text, dl, dt, dd, button, br, Html, Attribute)
-import Html.Attributes exposing (id, style, class)
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, on)
-import Random exposing (Generator, map, map2, map3, map4, map5, generate)
+import Random exposing (Generator)
 import Random.Extra exposing (sample)
 import Maybe.Extra exposing (isNothing)
 import Mouse exposing (Position)
@@ -147,14 +146,14 @@ type alias DetailLower =
 
 omikuji : Generator Omikuji
 omikuji =
-    let upper = map5 DetailUpper wish wait study moving romance
-        lower = map4 DetailLower lost business dispute travel
-    in  map3 Omikuji fortune upper lower
+    let upper = Random.map5 DetailUpper wish wait study moving romance
+        lower = Random.map4 DetailLower lost business dispute travel
+    in  Random.map3 Omikuji fortune upper lower
 
 level : Generator Level
 level =
     sample [ DaiKichi, ChuKichi, Kichi ]
-    |> map (Maybe.withDefault Kichi)
+    |> Random.map (Maybe.withDefault Kichi)
 
 flavor : Generator String
 flavor =
@@ -163,10 +162,10 @@ flavor =
         , "海原に舟漕ぎ出す心細さあれどやがて金波銀波の輝き渡る"
         , "運気盛んにして事を成すに良き頃なり脇目振らず一心を通すべし"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 fortune : Generator Fortune
-fortune = map2 Fortune level flavor
+fortune = Random.map2 Fortune level flavor
 
 wish : Generator String
 wish =
@@ -175,7 +174,7 @@ wish =
         , "油断すれば叶わず"
         , "達観して待つべし"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 wait : Generator String
 wait =
@@ -184,7 +183,7 @@ wait =
         , "来ず辛抱せよ"
         , "気づけば傍にあり"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 study : Generator String
 study =
@@ -193,7 +192,7 @@ study =
         , "難なれど実り多し"
         , "修練のときなり"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 moving : Generator String
 moving =
@@ -202,7 +201,7 @@ moving =
         , "西の方に幸あり"
         , "折あわず見直せ"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 romance : Generator String
 romance =
@@ -211,7 +210,7 @@ romance =
         , "順風満帆たる"
         , "荒天の予感あり"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 lost : Generator String
 lost =
@@ -220,7 +219,7 @@ lost =
         , "やがて出る"
         , "水辺にて見つかる"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 business : Generator String
 business =
@@ -229,7 +228,7 @@ business =
         , "焦らず待つべし"
         , "おおいに躍進あり"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 dispute : Generator String
 dispute =
@@ -238,7 +237,7 @@ dispute =
         , "万難なく凪なり"
         , "大物に挑むなかれ"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 travel : Generator String
 travel =
@@ -247,7 +246,7 @@ travel =
         , "遠方に吉あり"
         , "思わぬ出会いあり"
         ]
-        |> map (Maybe.withDefault "")
+        |> Random.map (Maybe.withDefault "")
 
 viewBox : Model -> Html Msg
 viewBox model =
