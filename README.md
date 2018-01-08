@@ -12,5 +12,6 @@ Run Things Locally
 $ git clone https://github.com/y-taka-23/elm-omikuji.git
 $ cd elm-omikuji
 $ npm install
+$ elm-package install
 $ npm run start
 ```
