@@ -1,15 +1,15 @@
 {
   "name": "elm-omikuji",
   "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
+  "description": "A sample of o-mikuji (Shinto fortunes) written in Elm.",
+  "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack -p"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "TAKAHASHI Yuto <ytaka23dev@gmail.com>",
+  "license": "BSD3",
   "devDependencies": {
     "css-loader": "^0.28.7",
     "elm-webpack-loader": "^4.4.0",
